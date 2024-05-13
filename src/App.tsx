@@ -50,7 +50,7 @@ const App: React.FC = () => {
           />
         </div>
        
-        <button type="submit">Enviar</button>
+        <button className= "justify-center" type="submit">Enviar</button>
       </form>
     </div>
   );
