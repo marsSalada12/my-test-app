@@ -13,17 +13,17 @@ const App: React.FC = () => {
     mensaje: '',
   });
 
-  // const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-  //   setFormData({ ...formData, [e.target.name]: e.target.value });
-  // };
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
-  // const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-  //   e.preventDefault();
-  //   // Aquí puedes realizar acciones adicionales con los datos del formulario
-  //   console.log(formData);
-  //   // Restablecer el formulario después de enviarlo
-  //   setFormData({ nombre: '', email: '', mensaje: '' });
-  // };
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    // Aquí puedes realizar acciones adicionales con los datos del formulario
+    console.log(formData);
+    // Restablecer el formulario después de enviarlo
+    setFormData({ nombre: '', email: '', mensaje: '' });
+  };
 
   return (
     <div className=" " >
@@ -37,7 +37,7 @@ const App: React.FC = () => {
             id="nombre"
             name="nombre"
             value={formData.nombre}
-            //onChange={handleChange}
+            onChange={handleChange}
           />
         </div>
         <div>
@@ -47,11 +47,15 @@ const App: React.FC = () => {
             id="email"
             name="email"
             value={formData.email}
-            //onChange={handleChange}
+            onChange={handleChange}
           />
         </div>
-       
-        <button className= "justify-center" type="submit">Enviar</button>
+
+        <button
+          className="justify-center"
+          type="submit">
+          Enviar
+        </button>
       </form>
     </div>
   );
