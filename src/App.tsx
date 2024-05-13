@@ -26,11 +26,11 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="cuerpa">
+    <div className="cuerpa " >
       <form onSubmit={handleSubmit}>
 
         <div className='card'>
-          <label htmlFor="nombre">Nombre:</label>
+          <label htmlFor="nombre">Nombre: </label>
           <input
             type="text"
             id="nombre"
@@ -40,7 +40,7 @@ const App: React.FC = () => {
           />
         </div>
         <div>
-          <label htmlFor="email">Email:</label>
+          <label htmlFor="email">Email: </label>
           <input
             type="email"
             id="email"
@@ -49,15 +49,7 @@ const App: React.FC = () => {
             onChange={handleChange}
           />
         </div>
-        <div>
-          <label htmlFor="mensaje">Mensaje:</label>
-          <textarea
-            id="mensaje"
-            name="mensaje"
-            value={formData.mensaje}
-            onChange={handleChange}
-          />
-        </div>
+       
         <button type="submit">Enviar</button>
       </form>
     </div>
