@@ -26,38 +26,41 @@ const App: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div className='card'>
-        <label htmlFor="nombre">Nombre:</label>
-        <input
-          type="text"
-          id="nombre"
-          name="nombre"
-          value={formData.nombre}
-          onChange={handleChange}
-        />
-      </div>
-      <div>
-        <label htmlFor="email">Email:</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-        />
-      </div>
-      <div>
-        <label htmlFor="mensaje">Mensaje:</label>
-        <textarea
-          id="mensaje"
-          name="mensaje"
-          value={formData.mensaje}
-          onChange={handleChange}
-        />
-      </div>
-      <button type="submit">Enviar</button>
-    </form>
+    <div className="cuerpa">
+      <form onSubmit={handleSubmit}>
+
+        <div className='card'>
+          <label htmlFor="nombre">Nombre:</label>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            value={formData.nombre}
+            onChange={handleChange}
+          />
+        </div>
+        <div>
+          <label htmlFor="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+          />
+        </div>
+        <div>
+          <label htmlFor="mensaje">Mensaje:</label>
+          <textarea
+            id="mensaje"
+            name="mensaje"
+            value={formData.mensaje}
+            onChange={handleChange}
+          />
+        </div>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
   );
 };
 
