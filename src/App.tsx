@@ -27,7 +27,7 @@ const App: React.FC = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div>
+      <div className='card'>
         <label htmlFor="nombre">Nombre:</label>
         <input
           type="text"
